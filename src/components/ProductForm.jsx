@@ -1,13 +1,62 @@
+import axios from "axios";
+import { useState } from "react";
+
 const ProductForm = () => {
+  const [data, setData] = useState({
+    name: "",
+    image: "",
+    price: "",
+    amount: 1,
+  });
+  const {name,image,price,amount} = data
+
+
+  const postProduct = async (newProduct) => {
+    try {
+      await axios.post(
+        "https://6581773a3dfdd1b11c435754.mockapi.io/products/",
+        newProduct
+      );
+    } catch (error) {}
+  };
+
+  const handleSubmit = (e)=>{
+e.preventDefault()
+const newProduct = {name,image,price,amount}
+postProduct(newProduct)
+setData({
+  name: "",
+  image: "",
+  price: "",
+  amount: "",
+})
+
+  }
+
+  const handleData = (e) => {
+    // console.log(e.target.id)
+    // console.log(e.target.name)
+    //? objemizin key Degerinin degisken olmasını saglamak için square bracket yontemi ile e.target.id parametresini kullandik
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
   return (
     <article id="add-product" className="mb-4 mt-4">
       <h1 className="text-center">Product</h1>
-      <form className="p-2">
+      <form className="p-2" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="add-name" className="form-label">
             Product Name
           </label>
-          <input type="text" className="form-control" id="add-name" required />
+          <input
+            type="text"
+            className="form-control"
+            id="add-name"
+            required
+            onChange={handleData}
+            name="name"
+            value={name}
+          />
         </div>
         <div className="mb-3">
           <label htmlFor="add-price" className="form-label">
@@ -17,6 +66,9 @@ const ProductForm = () => {
             type="number"
             className="form-control"
             id="add-price"
+            onChange={handleData}
+            name="price"
+            value={price}
             required
           />
         </div>
@@ -29,6 +81,9 @@ const ProductForm = () => {
             className="form-control"
             id="add-quantity"
             required
+            onChange={handleData}
+            name="amount"
+            value={amount}
           />
         </div>
         <label htmlFor="add-image" className="form-label">
@@ -44,6 +99,9 @@ const ProductForm = () => {
             id="add-image"
             aria-describedby="basic-addon3"
             required
+            onChange={handleData}
+            name="image"
+            value={image}
           />
         </div>
         <div className="text-center">

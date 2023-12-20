@@ -1,19 +1,19 @@
 import React from "react";
-
 const taxRate = 0.18;
 const shipping = 25;
+const CardTotal = ({product}) => {
 
-const CardTotal = () => {
-  
-  
-  
+ 
+const subTotal = product.reduce((acc,item) => item.price * item.amount * item.dumpingRate + acc , 0)
+
+
   return (
     <table className="table w-100">
       <tbody>
         <tr className="text-end">
           <th className="text-start">Subtotal</th>
           <td>
-            $<span className="subtotal"></span>
+            $<span className="subtotal">{subTotal}</span>
           </td>
         </tr>
         <tr className="text-end">
@@ -40,5 +40,4 @@ const CardTotal = () => {
     </table>
   );
 };
-
 export default CardTotal;

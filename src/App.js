@@ -11,14 +11,16 @@ function App() {
   
 
   return (
-    <div className="bg-light app">
+    <div>
       
       <Navbar/>
       <Routes>
-        <Route path="/" element= {<Main/>}></Route>
-        <Route path="/about" element= {<About/>}></Route>
-        <Route path="/newproduct" element= {<NewProduct/>}></Route>
-        <Route path="/productlist" element= {<ProductList/>}></Route>
+
+       
+        <Route path="/" element= {<Main/>}/>
+        <Route path="/about" element= {<About/>}/>
+        <Route path="/newproduct" element= {<NewProduct/>}/>
+        <Route path="/productlist" element= {<ProductList/>}/>
       
       
       
