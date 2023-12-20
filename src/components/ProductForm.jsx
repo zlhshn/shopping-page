@@ -6,7 +6,8 @@ const ProductForm = ({ data,handleData,handleSubmit, text }) => {
  
 
   return (
-    <article id="add-product" className="mb-4 mt-4">
+    
+    <article id="add-product" className="mb-4 mt-4 form">
       <h1 className="text-center">Product</h1>
       <form className="p-2" onSubmit={handleSubmit}>
         <div className="mb-3">

@@ -15,7 +15,7 @@ console.log(subTotal);
 console.log(product);
 
   return (
-    <table className="table w-100">
+    <table className="table w-100 m-4">
       <tbody>
         <tr className="text-end">
           <th className="text-start">Subtotal</th>

@@ -8,7 +8,7 @@ const About = () => {
           <div className="card p-3 py-4">
             <div className="text-center">
               <img
-                src="https://avatars.githubusercontent.com/u/93030628?v=4"
+                src="https://github.com/account"
                 width={100}
                 className="rounded-circle"
                 alt="a"
@@ -18,8 +18,8 @@ const About = () => {
               <span className="bg-secondary p-1 px-4 rounded text-white">
                 Pro
               </span>
-              <h5 className="mt-2 mb-0">Anthony Harold</h5>
-              <span>Fullstack Developer</span>
+              <h5 className="mt-2 mb-0">Zeliha Şahin</h5>
+              <span>Frontend Developer</span>
               <div className="px-4 mt-1">
                 <p className="fonts">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
@@ -50,7 +50,7 @@ const About = () => {
                 <button className="btn btn-outline-primary px-4">
                   <a
                     className="text-decoration-none text-black "
-                    href="https://github.com/anthonyharold67"
+                    href="https://github.com/zlhshn"
                     target="true">
                     Message
                   </a>
@@ -58,7 +58,7 @@ const About = () => {
                 <button className="btn btn-primary px-4 ms-3">
                   <a
                     className="text-decoration-none text-white"
-                    href="https://github.com/anthonyharold67"
+                    href="https://github.com/zlhshn"
                     target="true">
                     Contact
                   </a>

@@ -30,7 +30,7 @@ const ProductList = () => {
 
   if (loading) {
     return (
-      <div className="container mt-3 text-center">
+      <div className=" mt-3 text-center">
         <img src={loadingImage} alt="loading" />
       </div>
     );
@@ -38,14 +38,16 @@ const ProductList = () => {
 
     return (
       <div className="container mt-3 text-center">
+        <div className={"bg-light d-sm-block d-md-flex"}>
         <p>Error...</p>
+       </div>
       </div>
     );
   }else {
     if (product?.length > 0) {
       return (
         <div className="container mt-3">
-          <div className={"bg-light d-sm-block d-md-flex"}>
+          <div className="d-sm-block d-md-flex">
             <>
               <article id="product-panel" className="col-md-5">
                 {product?.map((item) => (

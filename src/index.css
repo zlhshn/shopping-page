@@ -4,27 +4,41 @@
   box-sizing: border-box;
 }
 body {
-  background: #f1f2b5 !important;
+  background-color: #d8d1ad;
+background-image: linear-gradient(180deg, #d8d2b4 25%,  #dfdbbd 100%);
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+  /* background: #f1f2b5 !important;
   background: -webkit-linear-gradient(to right, #135058, #f1f2b5) !important;
-  background: linear-gradient(to right, #135058, #f1f2b5) !important;
+  background: linear-gradient(to right, #135058, #f1f2b5) !important; */
 }
 
 .main {
-  background: url(./assets/shopping.jpg);
+  background: url(./assets/shopping5.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  opacity: .8;
+  object-fit: cover;
   min-height: calc(100vh - 60px);
   position: relative;
   > div {
     text-align: center;
-    color: white;
+    color: #cc0606;
     position: absolute;
+  
     top: 30%;
     left: 50%;
     transform: translate(-50%, 0%);
     .main-buttons {
       margin-top: 1rem;
     }
+  }
+
+  h1{
+
+    font-size: 3.2rem;
+    font-weight: 700;
   }
 }
 .nav-link {
@@ -66,7 +80,7 @@ body {
   top: 0;
   width: 4px;
   height: 100%;
-  background-color: #135058;
+  background-color: #ad2121;
   transform: scaleY(0);
   transition: all 0.5s;
   transform-origin: bottom;
@@ -96,14 +110,14 @@ body {
 .main-buttons button:nth-child(1) {
   border: 1px solid white !important;
   background-color: white;
-  color: #135058;
+  color: #cc0606;
   height: 40px;
 }
 .main-buttons button:nth-child(1):hover {
-  border: 1px solid #135058 !important;
+  border: 1px solid #cc0606 !important;
   color: #fff;
   height: 40px;
-  background-color: #135058;
+  background-color: #cc0606;
 }
 
 .buttons button:nth-child(1) {
@@ -113,24 +127,34 @@ body {
 }
 
 .buttons button:nth-child(1):hover {
-  border: 1px solid #135058 !important;
+  border: 1px solid #cc0606 !important;
   height: 40px;
-  background-color: #135058;
+  background-color: #cc0606;
   & a {
     color: #fff !important;
   }
 }
 
 .buttons button:nth-child(2) {
-  border: 1px solid #135058 !important;
-  background-color: #135058;
+  border: 1px solid #cc0606!important;
+  background-color: #cc0606;
   color: #fff;
   height: 40px;
 }
 
 .main-buttons button:nth-child(2) {
-  border: 1px solid #135058 !important;
-  background-color: #135058;
+  border: 1px solid #cc0606 !important;
+  background-color: #cc0606;
   color: #fff;
   height: 40px;
+}
+
+
+.form {
+
+  border:2px solid #6b6a5c;
+  width: 50%;
+  margin: auto;
+  box-shadow: 3px 3px 3px 2px;
+  padding: 2rem;
 }
