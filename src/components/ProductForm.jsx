@@ -1,52 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
-import SweetAlert2 from 'react-sweetalert2';
-
-const ProductForm = () => {
-  const [data, setData] = useState({
-    name: "",
-    image: "",
-    price: "",
-    amount: 1,
-  });
-  const {name,image,price,amount } = data
 
 
-  const postProduct = async (newProduct) => {
-    try {
-      await axios.post(
-        "https://6581773a3dfdd1b11c435754.mockapi.io/products/",
-        newProduct
-      );
-    } catch (error) {}
-  };
-
-  const handleSubmit = (e)=>{
-e.preventDefault()
-const newProduct = {name,image,price,amount}
-postProduct(newProduct)
-setData({
-  name: "",
-  image: "",
-  price: "",
-  amount: "",
-})
-
-swal.fire({
-  title: 'Example',
-  text: 'Swal injected',
-  icon: 'success',
-});
-}
-
-  }
-
-  const handleData = (e) => {
-    // console.log(e.target.id)
-    // console.log(e.target.name)
-    //? objemizin key Degerinin degisken olmasını saglamak için square bracket yontemi ile e.target.id parametresini kullandik
-    setData({ ...data, [e.target.name]: e.target.value });
-  };
+const ProductForm = ({ data,handleData,handleSubmit, text }) => {
+ 
 
   return (
     <article id="add-product" className="mb-4 mt-4">
@@ -59,11 +16,11 @@ swal.fire({
           <input
             type="text"
             className="form-control"
-            id="add-name"
+            id="name"
             required
             onChange={handleData}
             name="name"
-            value={name}
+            value={data.name}
           />
         </div>
         <div className="mb-3">
@@ -73,10 +30,10 @@ swal.fire({
           <input
             type="number"
             className="form-control"
-            id="add-price"
+            id="price"
             onChange={handleData}
             name="price"
-            value={price}
+            value={data.price}
             required
           />
         </div>
@@ -91,7 +48,7 @@ swal.fire({
             required
             onChange={handleData}
             name="amount"
-            value={amount}
+            value={data.amount}
           />
         </div>
         <label htmlFor="add-image" className="form-label">
@@ -109,12 +66,12 @@ swal.fire({
             required
             onChange={handleData}
             name="image"
-            value={image}
+            value={data.image}
           />
         </div>
         <div className="text-center">
           <button type="submit" className="add-to-cart btn btn-success btn-sm">
-            <i className="fa-solid fa-cart-plus me-2"></i>Save To Product
+            <i className="fa-solid fa-cart-plus me-2"></i>Save To Product {text}
           </button>
         </div>
       </form>

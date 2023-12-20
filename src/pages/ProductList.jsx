@@ -34,7 +34,14 @@ const ProductList = () => {
         <img src={loadingImage} alt="loading" />
       </div>
     );
-  } else {
+  } else if(error){
+
+    return (
+      <div className="container mt-3 text-center">
+        <p>Error...</p>
+      </div>
+    );
+  }else {
     if (product?.length > 0) {
       return (
         <div className="container mt-3">
@@ -67,10 +74,10 @@ const ProductList = () => {
       );
     }
 
-    {
-      error && <p>ERROR</p>
-    }
+    
   }
+
+ 
 };
 
 export default ProductList;

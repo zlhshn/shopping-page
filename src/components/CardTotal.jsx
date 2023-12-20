@@ -39,7 +39,7 @@ console.log(product);
           <th className="text-start">Total</th>
           <td>
            $
-            <span className="total">{(subTotal + shipping + taxPrice )}
+            <span className="total">{(subTotal + shipping + taxPrice ).toFixed(2)}
             </span>
           </td>
         </tr>

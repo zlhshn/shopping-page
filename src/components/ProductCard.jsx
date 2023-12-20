@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+
 const ProductCard = ({ item, getProducts }) => {
   const { name, image, id, price, amount  } = item;
 
 const dampingRate = 0.8
-
+const navigate = useNavigate()
   const handlePlus = async () => {
     try {
       await axios.put(
@@ -48,19 +51,24 @@ const dampingRate = 0.8
     getProducts();
   };
 
- 
+ const handleEdit = ()=>{
+
+navigate("/update" , {state: item})
+ }
   
 
   return (
     <div className="card shadow-lg mb-3">
       <div className="row g-0">
         <div className="col-md-5">
-          <img
+          <img  
+            onClick={handleEdit}
             src={image}
             className="w-100 h-100 rounded-start"
             alt={"name"}
             height="250px"
             title={""}
+            role="button"
           />
         </div>
         <div className="col-md-7">
@@ -102,6 +110,7 @@ const dampingRate = 0.8
               >
                 <i className="fa-solid fa-trash-can me-2"></i>Remove
               </button>
+             
             </div>
             <div className="mt-2">
               Product Total: $<span className="product-line-price">{(price * dampingRate * amount).toFixed(2)}</span>
