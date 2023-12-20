@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import SweetAlert2 from 'react-sweetalert2';
 
 const ProductForm = () => {
   const [data, setData] = useState({
@@ -8,7 +9,7 @@ const ProductForm = () => {
     price: "",
     amount: 1,
   });
-  const {name,image,price,amount} = data
+  const {name,image,price,amount } = data
 
 
   const postProduct = async (newProduct) => {
@@ -30,6 +31,13 @@ setData({
   price: "",
   amount: "",
 })
+
+swal.fire({
+  title: 'Example',
+  text: 'Swal injected',
+  icon: 'success',
+});
+}
 
   }
 

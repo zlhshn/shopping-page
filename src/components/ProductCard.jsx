@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 const ProductCard = ({ item, getProducts }) => {
-  const { name, image, id, price, amount, dampingRate } = item;
+  const { name, image, id, price, amount  } = item;
+
+const dampingRate = 0.8
 
   const handlePlus = async () => {
     try {
       await axios.put(
         `https://6581773a3dfdd1b11c435754.mockapi.io/products/${id}/`,
-        { ...item, amount: amount + 1 }
+        { ...item, amount: Number(amount ) + 1 }
       );
     } catch (error) {
       console.log(error);
@@ -21,7 +23,7 @@ const ProductCard = ({ item, getProducts }) => {
       try {
         await axios.put(
           `https://6581773a3dfdd1b11c435754.mockapi.io/products/${id}/`,
-          { ...item, amount: amount - 1 }
+          { ...item, amount: Number(amount )- 1 }
         );
     } catch (error) {
       
@@ -46,6 +48,9 @@ const ProductCard = ({ item, getProducts }) => {
     getProducts();
   };
 
+ 
+  
+
   return (
     <div className="card shadow-lg mb-3">
       <div className="row g-0">
@@ -65,9 +70,9 @@ const ProductCard = ({ item, getProducts }) => {
             </h5>
             <div className="product-price">
               <p className="text-warning h2">
-                $<span className="damping-price">{price}</span>
+                $<span className="damping-price">{(price * dampingRate).toFixed(2)}</span>
                 <span className="h5 text-dark text-decoration-line-through">
-                  price
+                 {Number(price).toFixed(2)}
                 </span>
               </p>
             </div>
@@ -99,7 +104,7 @@ const ProductCard = ({ item, getProducts }) => {
               </button>
             </div>
             <div className="mt-2">
-              Product Total: $<span className="product-line-price">{}</span>
+              Product Total: $<span className="product-line-price">{(price * dampingRate * amount).toFixed(2)}</span>
             </div>
           </div>
         </div>
