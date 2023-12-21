@@ -25,7 +25,7 @@ https://mockapi.io
 
 🚀 React <br>
 🚀 React - Router <br>
-🚀 
+🚀 React - Router - Hooks (useLocation/useNavigate) <br>
 🚀 Bootstrap <br>
 🚀 Axios <br>
 🚀 Sweetalert2 <br>
