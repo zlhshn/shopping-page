@@ -24,8 +24,8 @@ https://mockapi.io
 ## Tech/framework/method used
 
 🚀 React <br>
-🚀 React - Router <br>
-🚀 React - Router - Hooks (useLocation/useNavigate) <br>
+🚀 React - Router<br>
+🚀 React - Router - Hooks (useLocation/useNavigate)<br>
 🚀 Bootstrap <br>
 🚀 Axios <br>
 🚀 Sweetalert2 <br>
