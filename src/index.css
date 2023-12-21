@@ -57,6 +57,7 @@ height: 100vh;
 }
 .active {
   text-decoration: underline !important;
+  color: red !important;
 }
 
 .card {
@@ -163,7 +164,7 @@ height: 100vh;
   border:2px solid #6b6a5c;
   width: 50%;
   margin : auto;
-  box-shadow: 3px 3px 3px 2px;
+  box-shadow: 3px 3px 3px ;
   padding: 2rem;
 }
 

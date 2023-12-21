@@ -39,7 +39,7 @@ const ProductList = () => {
 
     return (
       <div className="container mt-3 text-center">
-        <div className={"bg-light d-sm-block d-md-flex"}>
+        <div className={"text-danger fs-1 m-auto"}>
         <p>Error...</p>
        </div>
       </div>
