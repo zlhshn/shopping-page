@@ -71,7 +71,7 @@ navigate("/update" , {state: item})
             role="button"
           />
         </div>
-        <div className="col-md-7">
+        <div className="col-12 col-md-7">
           <div className="card-body">
             <h5 className="card-title" role="button">
               {name}

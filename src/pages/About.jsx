@@ -1,4 +1,5 @@
 import React from "react";
+import icon from "../assets/softwareicon.png"
 
 const About = () => {
   return (
@@ -8,16 +9,16 @@ const About = () => {
           <div className="card p-3 py-4">
             <div className="text-center">
               <img
-                src="https://github.com/account"
+                src={icon}
                 width={100}
                 className="rounded-circle"
-                alt="a"
+                alt="icon"
               />
             </div>
             <div className="text-center mt-3">
-              <span className="bg-secondary p-1 px-4 rounded text-white">
+              {/* <span className="bg-secondary p-1 px-4 rounded text-white">
                 Pro
-              </span>
+              </span> */}
               <h5 className="mt-2 mb-0">Zeliha Şahin</h5>
               <span>Frontend Developer</span>
               <div className="px-4 mt-1">

@@ -3,6 +3,7 @@ import ProductCard from "../components/ProductCard";
 import CardTotal from "../components/CardTotal";
 import axios from "axios";
 import loadingImage from "../assets/spinner.gif";
+import cart from "../assets/cart.png"
 
 const ProductList = () => {
   const [loading, setLoading] = useState(false);
@@ -67,10 +68,11 @@ const ProductList = () => {
       );
     } else {
       return (
-        <div className="container mt-3">
+        <div className="container mt-3 nodata">
           {" "}
           <p className="text-center text-danger w-100">
             No products data...
+            <img src={cart} className="cartimg" />
           </p>{" "}
         </div>
       );

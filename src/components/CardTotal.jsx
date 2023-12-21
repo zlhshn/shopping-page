@@ -2,20 +2,17 @@ import React from "react";
 const taxRate = 0.18;
 const shipping = 25;
 
+const CardTotal = ({ product }) => {
+  const dumpingRate = 0.8;
+  const subTotal = product?.reduce(
+    (acc, item) => item.price * item.amount * dumpingRate + acc,
+    0
+  );
 
-const CardTotal = ({product}) => {
-
- const dumpingRate = 0.8
-  const subTotal = product?.reduce((acc, item) => item.price * item.amount * dumpingRate + acc,0)
-
-  const taxPrice = (taxRate* subTotal)
-
-console.log(subTotal);
-
-console.log(product);
+  const taxPrice = taxRate * subTotal;
 
   return (
-    <table className="table w-100 m-4">
+    <table className="table w-100 m-4 totalcard ">
       <tbody>
         <tr className="text-end">
           <th className="text-start">Subtotal</th>
@@ -38,8 +35,9 @@ console.log(product);
         <tr className="text-end">
           <th className="text-start">Total</th>
           <td>
-           $
-            <span className="total">{(subTotal + shipping + taxPrice ).toFixed(2)}
+            $
+            <span className="total">
+              {(subTotal + shipping + taxPrice).toFixed(2)}
             </span>
           </td>
         </tr>

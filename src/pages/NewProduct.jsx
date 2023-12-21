@@ -52,7 +52,7 @@ const NewProduct = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container new">
       <ProductForm
         handleSubmit={handleSubmit}
         data={data}
