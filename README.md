@@ -1,6 +1,6 @@
 ## Description
 
-In this project, I directed the adding and editing operations between different pages with the react router. I also worked on operations such as deleting, increasing and decreasing the number of products on the product list page.
+This project is a multi-page web application. Addition and editing operations between pages were managed with react router. Additionally, operations such as deleting, increasing and decreasing products on the product list page were also worked on.
 
 ##  Live Link of the Project
 
@@ -16,10 +16,10 @@ https://mockapi.io
 
 ## How to use?
 
-🛒 You can add products on the new product page <br>
-🛒 You can view the product on the product list page <br>
-🛒 You can click on the image of the product and edit it. <br>
-🛒 You can increase, decrease and delete the product card. <br>
+🛒 Users can add products on the new product page <br>
+🛒 Users can view the product on the product list page <br>
+🛒 Users can click on the image of the product and edit it. <br>
+🛒 Users can increase, decrease and delete the product card. <br>
 
 ## Tech/framework/method used
 
